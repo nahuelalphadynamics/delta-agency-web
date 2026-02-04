@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELTA SOUTH AMERICA | AGENCY</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Agencia de booking y management para artistas de música electrónica en Sudamérica. Roster: Sven Väth, Eelke Kleijn, Oostil. Tours en Argentina, Brasil, Chile.">
+    <meta name="keywords" content="DJ booking, agencia DJs, música electrónica, tours Sudamérica, Afterlife, Cocoon">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DELTA Agency | Booking DJs Sudamérica">
+    <meta property="og:description"
+        content="Infraestructura profesional de touring para artistas de música electrónica en Sudamérica.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:url" content="https://deltaagency.com">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EntertainmentBusiness",
+      "name": "Delta South America Agency",
+      "description": "Agencia de booking y management para artistas de música electrónica en Sudamérica.",
+      "image": "/DELTALOGOSABLACK.png",
+      "url": "https://deltaagency.com",
+      "telephone": "+54 9 341 XXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rosario",
+        "addressRegion": "Santa Fe",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.9442,
+        "longitude": -60.6505
+      },
+      "areaServed": ["Argentina", "Brasil", "Chile", "Uruguay", "Colombia", "Paraguay"],
+      "priceRange": "$$$",
+      "sameAs": [
+        "https://instagram.com/deltaagency",
+        "https://ra.co/promoters/deltaagency"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS (compiled locally) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Noto+Sans:ital,wght@0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero-title {
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            line-height: 0.8;
+            font-size: clamp(4rem, 15vw, 12rem);
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+
+        .map-container {
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.05));
+        }
+
+        .city-point {
+            fill: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .city-point:hover {
+            fill: #ff3e00;
+            r: 5;
+        }
+
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                r: 2;
+                opacity: 1;
+            }
+
+            100% {
+                r: 8;
+                opacity: 0;
+            }
+        }
+
+        .artist-card {
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+        }
+
+        .artist-card:hover {
+            filter: grayscale(0%);
+            background-color: #111;
+        }
+
+        .artist-card img {
+            transition: transform 0.7s ease;
+        }
+
+        .artist-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+    </style>
+  <link rel="stylesheet" crossorigin href="/assets/index-CSjEtIQ5.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
+        <div class="flex flex-col">
+            <span class="font-black italic tracking-tighter text-2xl">DELTA</span>
+            <span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Agency</span>
+        </div>
+        <div class="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-bold">
+            <a href="#tours" class="hover:opacity-50 transition-opacity">Next Tours</a>
+            <a href="#network" class="hover:opacity-50 transition-opacity">Network</a>
+            <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center px-6 relative overflow-hidden">
+        <div class="relative z-10">
+            <h1 class="hero-title uppercase italic">DELTA</h1>
+            <h1 class="hero-title uppercase text-outline">SOUTH</h1>
+            <h1 class="hero-title uppercase">AMERICA</h1>
+            <div class="mt-4 md:mt-6">
+                <span class="text-3xl md:text-6xl font-black tracking-[0.15em] uppercase opacity-90">Agency</span>
+            </div>
+        </div>
+
+        <!-- Background Decorative Element -->
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+            <div
+                class="w-full h-full bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop')] bg-cover">
+            </div>
+        </div>
+
+        <!-- CTA Above the Fold - Bottom Right -->
+        <div class="absolute bottom-12 right-6 z-20">
+            <a href="#contact"
+                class="inline-block border-2 border-cyan-400 text-white px-8 py-4 text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:bg-cyan-400 hover:text-black shadow-[0_0_15px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.6)]">
+                Book Artist
+            </a>
+        </div>
+
+        <div class="absolute bottom-12 left-6">
+            <p class="text-[10px] mono tracking-[0.5em] uppercase opacity-40">Operational Infrastructure / South America
+                2026</p>
+        </div>
+    </section>
+
+    <!-- NEXT TOURS SECTION -->
+    <section id="tours" class="py-32 px-6 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 flex justify-between items-end">
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase">Next Tours</h2>
+                <div class="h-[1px] flex-grow mx-8 bg-white/10 hidden md:block mb-4"></div>
+                <span class="text-xs mono opacity-40 uppercase tracking-widest mb-2">Confirmed Roster</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                <!-- Artist: Eelke Kleijn (Value Stream: Progressive) -->
+                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop"
+                        alt="Eelke Kleijn"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+
+                    <!-- Asset ID -->
+                    <div
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: EK-26</span>
+                    </div>
+
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Days Like
+                                Nights</span>
+                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q3
+                                2026</span>
+                        </div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Eelke Kleijn</h3>
+                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                    </div>
+                </div>
+
+                <!-- Artist: Oostil (Value Stream: Melodic) -->
+                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
+                    <img src="/assets/oostil_new-CJinsaHh.png" alt="Oostil"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+
+                    <!-- Asset ID -->
+                    <div
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: OS-26</span>
+                    </div>
+
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="flex justify-between items-end mb-2">
+                            <span
+                                class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Afterlife</span>
+                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q3
+                                2026</span>
+                        </div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Oostil</h3>
+                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                    </div>
+                </div>
+
+                <!-- Artist: Sven Väth (Value Stream: Legacy) -->
+                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=2070&auto=format&fit=crop"
+                        alt="Sven Väth"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
+                    </div>
+
+                    <!-- Asset ID -->
+                    <div
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: SV-26</span>
+                    </div>
+
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Cocoon</span>
+                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q4
+                                2026</span>
+                        </div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Sven Väth</h3>
+                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELTA CLEAN INTERACTIVE MAP (Leaflet V3 - High Impact) -->
+    <section class="w-full relative py-24 bg-[#050505] border-t border-[#222] overflow-hidden">
+
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-20"
+            style="background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+
+            <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 h-auto lg:h-[600px] border border-[#1f1f1f] bg-[#020202]">
+
+                <!-- LIST COMMAND PANEL -->
+                <div
+                    class="lg:col-span-4 p-8 flex flex-col justify-between border-r border-[#1f1f1f] relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#020202]">
+
+                    <div>
+                        <h2
+                            class="text-[10px] font-bold tracking-[0.4em] text-[#FF3E00] mb-4 flex items-center uppercase">
+                            <span class="w-1.5 h-1.5 bg-[#FF3E00] mr-2 rounded-full animate-pulse"></span>
+                            Network Status
+                        </h2>
+                        <h3 class="text-3xl font-black text-white mb-6 tracking-tighter">ACTIVE<br>NODES</h3>
+                        <p class="text-xs text-[#71717A] font-mono leading-relaxed mb-8 border-l border-[#333] pl-3">
+                            Infraestructura operativa gestionada en tiempo real. Seleccione un nodo para visualizar
+                            coordenadas.
+                        </p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="rosario">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-white group-hover:text-[#FF3E00] transition-colors tracking-tight">ROSARIO
+                                    [HUB]</span>
+                                <span class="text-lg opacity-80 group-hover:opacity-100 transition-opacity">🇦🇷</span>
+                            </div>
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors">
+                                    COORDINATION CENTER</div>
+                                <div class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></div>
+                            </div>
+                        </div>
+
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="saopaulo">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SÃO
+                                    PAULO</span>
+                                <span
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇧🇷</span>
+                            </div>
+                        </div>
+
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="santiago">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SANTIAGO</span>
+                                <span
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇨🇱</span>
+                            </div>
+                        </div>
+
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="asuncion">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">ASUNCIÓN</span>
+                                <span
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇵🇾</span>
+                            </div>
+                        </div>
+
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="buenosaires">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">BUENOS
+                                    AIRES</span>
+                                <span
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
+                            </div>
+                        </div>
+                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
+                            data-target="cordoba">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">CÓRDOBA</span>
+                                <span
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-[#222] flex justify-between items-center">
+                        <div class="text-[9px] text-[#444] font-mono">DATA_STREAM: CONNECTED</div>
+                        <div class="flex gap-1">
+                            <div class="w-3 h-0.5 bg-[#FF3E00] animate-pulse"></div>
+                            <div class="w-1 h-0.5 bg-[#FF3E00] animate-pulse delay-75"></div>
+                            <div class="w-1 h-0.5 bg-[#FF3E00] animate-pulse delay-150"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAP CONTAINER -->
+                <div class="lg:col-span-8 relative bg-black h-[400px] lg:h-auto group">
+
+                    <div class="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,1)] z-[400] pointer-events-none">
+                    </div>
+                    <!-- (REMOVED) Fixed red line scanner was here -->
+
+                    <div id="clean-map" class="w-full h-full bg-[#050505] z-0 contrast-[120%] brightness-75"></div>
+
+                    <div
+                        class="absolute bottom-6 right-6 z-[500] text-right pointer-events-none bg-black/80 p-2 border border-[#333] backdrop-blur-sm">
+                        <div class="text-[10px] text-[#FF3E00] font-mono mb-1">LIVE INFRASTRUCTURE</div>
+                        <div class="text-[9px] text-[#555] font-mono">LAT: -32.94 | LONG: -60.65</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Estilos de los Marcadores */
+
+        .custom-map-icon {
+            background: transparent;
+            border: none;
+        }
+
+        /* HUB: Punto Naranja Pulsante */
+        .marker-hub {
+            width: 12px;
+            height: 12px;
+            background-color: #FF3E00;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #FF3E00;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #000;
+            position: relative;
+        }
+
+        /* Efecto de onda expansiva - DESACTIVADO para look más limpio */
+        .marker-hub::after {
+            display: none;
+            /* Removido para eliminar anillo rojo */
+        }
+
+        /* OCULTAR anillo rojo cuando está iluminado */
+        .marker-highlight .marker-hub::after {
+            display: none !important;
+        }
+
+        /* NODOS: Puntos Blancos Pequeños */
+        .marker-node {
+            width: 8px;
+            height: 8px;
+            background-color: #444;
+            border-radius: 50%;
+            border: 1px solid #000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* HOVER STATES - Efecto 3D esférico con contorno neon */
+        .marker-highlight .marker-node,
+        .marker-highlight .marker-hub {
+            /* EFECTO 3D ESFÉRICO - Gradiente que simula iluminación */
+            background: radial-gradient(ellipse 70% 70% at 30% 30%,
+                    rgba(180, 180, 180, 1) 0%,
+                    rgba(100, 100, 100, 1) 40%,
+                    rgba(60, 60, 60, 1) 70%,
+                    rgba(30, 30, 30, 1) 100%) !important;
+            transform: scale(3);
+            box-shadow:
+                /* Sombra interna para profundidad */
+                inset -2px -2px 4px rgba(0, 0, 0, 0.5),
+                inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+                /* Contorno neon exterior */
+                0 0 0 2px rgba(0, 212, 255, 0.8),
+                0 0 8px rgba(0, 212, 255, 1),
+                0 0 15px rgba(0, 136, 255, 0.9),
+                0 0 25px rgba(0, 136, 255, 0.7),
+                0 0 40px rgba(157, 0, 255, 0.5),
+                0 0 60px rgba(157, 0, 255, 0.3),
+                0 0 90px rgba(102, 0, 204, 0.2) !important;
+            border: none !important;
+            z-index: 9999;
+        }
+
+        @keyframes pulse-single {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Customizar Tooltip de Leaflet para Flags */
+        .flag-tooltip {
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 0;
+            font-family: 'Inter', monospace;
+            font-size: 11px;
+            padding: 4px 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        .flag-tooltip::before {
+            border-top-color: #000;
+        }
+
+        .leaflet-tooltip-left::before {
+            border-left-color: #000;
+        }
+
+        .leaflet-tooltip-right::before {
+            border-right-color: #000;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // 1. Configuración del Mapa
+            var map = L.map('clean-map', {
+                center: [-28.000, -58.000],
+                zoom: 4,
+                zoomControl: false,
+                scrollWheelZoom: false, // Bloquear scroll para evitar accidentes
+                attributionControl: false
+            });
+
+            // 2. Capa Oscura (Dark Matter) - Sin etiquetas para limpieza total
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                attribution: '© OpenStreetMap contributors',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+
+            // 3. Datos de las Ciudades (Incluyendo Banderas)
+            const cities = {
+                'rosario': { coords: [-32.9442, -60.6505], type: 'hub', flag: '🇦🇷', label: 'ROSARIO' },
+                'saopaulo': { coords: [-23.5505, -46.6333], type: 'node', flag: '🇧🇷', label: 'SÃO PAULO' },
+                'santiago': { coords: [-33.4489, -70.6693], type: 'node', flag: '🇨🇱', label: 'SANTIAGO' },
+                'asuncion': { coords: [-25.2637, -57.5759], type: 'node', flag: '🇵🇾', label: 'ASUNCIÓN' },
+                'buenosaires': { coords: [-34.6037, -58.3816], type: 'node', flag: '🇦🇷', label: 'BUENOS AIRES' },
+                'cordoba': { coords: [-31.4201, -64.1888], type: 'node', flag: '🇦🇷', label: 'CÓRDOBA' }
+            };
+
+            // Almacén de marcadores
+            const markers = {};
+            // Almacén de líneas de conexión
+            const lines = [];
+
+            // 4. Crear Marcadores + Tooltips
+            for (const [key, data] of Object.entries(cities)) {
+
+                // FIXED: Colocamos la clase visual EN UN DIV INTERNO
+                // Leaflet controla la posición del div exterior (className)
+                // Nosotros animamos el div interior (html)
+                const customIcon = L.divIcon({
+                    className: 'custom-map-icon', // Clase neutra para el contenedor
+                    html: `<div class="${data.type === 'hub' ? 'marker-hub' : 'marker-node'}"></div>`,
+                    iconSize: data.type === 'hub' ? [12, 12] : [8, 8],
+                    iconAnchor: data.type === 'hub' ? [6, 6] : [4, 4]
+                });
+
+                const marker = L.marker(data.coords, { icon: customIcon }).addTo(map);
+
+                // Tooltip con Bandera (oculto por defecto)
+                marker.bindTooltip(`${data.flag} ${data.label}`, {
+                    permanent: false,
+                    direction: 'top',
+                    className: 'flag-tooltip',
+                    offset: [0, -10],
+                    opacity: 1
+                });
+
+                markers[key] = marker;
+            }
+
+            // 5. Lógica de Interacción (Lista <-> Mapa)
+            const listItems = document.querySelectorAll('.city-item');
+
+            listItems.forEach(item => {
+
+                // HOVER IN
+                item.addEventListener('mouseenter', () => {
+                    const targetKey = item.getAttribute('data-target');
+                    const targetMarker = markers[targetKey];
+
+                    if (targetMarker) {
+                        const iconElement = targetMarker.getElement();
+                        if (iconElement) {
+                            // Encontrar el div visual interno
+                            const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
+                            if (visualDot) {
+                                // EFECTO PREMIUM: Solo iluminar contorno, mantener gris
+                                // NO cambiar background - mantener color original
+                                visualDot.style.transform = 'scale(3)';
+                                // CONTORNO NEON SUAVE - Múltiples capas de glow
+                                visualDot.style.boxShadow = `
+                                    0 0 0 2px rgba(0, 212, 255, 0.8),
+                                    0 0 8px rgba(0, 212, 255, 1),
+                                    0 0 15px rgba(0, 136, 255, 0.9),
+                                    0 0 25px rgba(0, 136, 255, 0.7),
+                                    0 0 40px rgba(157, 0, 255, 0.5),
+                                    0 0 60px rgba(157, 0, 255, 0.3),
+                                    0 0 90px rgba(102, 0, 204, 0.2)
+                                `;
+                                visualDot.style.zIndex = '9999';
+                            }
+                            // Añadir clase para que CSS oculte el anillo rojo
+                            iconElement.classList.add('marker-highlight');
+                            iconElement.style.zIndex = '10000';
+                        }
+                        targetMarker.openTooltip();
+                    }
+                });
+
+                // HOVER OUT
+                item.addEventListener('mouseleave', () => {
+                    const targetKey = item.getAttribute('data-target');
+                    const targetMarker = markers[targetKey];
+
+                    if (targetMarker) {
+                        const iconElement = targetMarker.getElement();
+                        if (iconElement) {
+                            // Encontrar el div visual interno
+                            const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
+                            if (visualDot) {
+                                // RESETEAR ESTILOS INLINE
+                                visualDot.style.background = '';
+                                visualDot.style.transform = '';
+                                visualDot.style.boxShadow = '';
+                                visualDot.style.border = '';
+                                visualDot.style.zIndex = '';
+                            }
+                            // Quitar clase para restaurar anillo rojo
+                            iconElement.classList.remove('marker-highlight');
+                            iconElement.style.zIndex = '';
+                        }
+                        targetMarker.closeTooltip();
+                    }
+                });
+            });
+
+            // Fit bounds on mobile fix
+            if (window.innerWidth < 768) {
+                map.setZoom(3);
+            }
+        });
+    </script>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="bg-white text-black py-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
+            <div class="flex-1 max-w-xl">
+                <span class="text-[10px] font-black uppercase tracking-[0.5em] mb-8 block">Strategic Inquiry</span>
+
+                <form id="inquiry-form" class="space-y-6">
+                    <!-- Honeypot Anti-Spam (invisible to users, bots fill it) -->
+                    <div style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1;">
+                        <label for="honeypot_field">Do not fill this field</label>
+                        <input type="text" name="honeypot_field" id="honeypot_field" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group">
+                            <label
+                                class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Entity
+                                Identity</label>
+                            <input type="text" name="entity_name" required
+                                class="w-full bg-transparent border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none placeholder-zinc-400"
+                                placeholder="Nombre Completo / Productora">
+                        </div>
+                        <div class="group">
+                            <label
+                                class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Classification</label>
+                            <select name="classification" required
+                                class="w-full bg-white border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none appearance-none cursor-pointer">
+                                <option value="" disabled selected>SELECT ROLE</option>
+                                <option value="buyer">Buyer (Promoter)</option>
+                                <option value="stakeholder">Stakeholder (Brand)</option>
+                                <option value="partner">Partner (Agency)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label
+                            class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Data
+                            Packet</label>
+                        <textarea rows="2" name="data_packet" required
+                            class="w-full bg-transparent border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none placeholder-zinc-400 resize-none"
+                            placeholder="Fecha aprox, Venue, Presupuesto estimado..."></textarea>
+                    </div>
+
+                    <div class="pt-8">
+                        <button type="submit"
+                            class="border-2 border-black px-8 py-4 text-[10px] font-black tracking-[0.3em] uppercase hover:bg-black hover:text-white transition-all duration-300 w-full md:w-auto">
+                            Transmit Inquiry
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-16 flex gap-8">
+                    <a href="#"
+                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Instagram</a>
+                    <a href="#"
+                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Resident
+                        Advisor</a>
+                    <a href="#"
+                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <div class="w-40 mb-8 ml-auto">
+                    <img src="DELTALOGOSABLACK.png" alt="DELTA" class="w-full h-auto">
+                </div>
+                <div class="text-[10px] mono uppercase space-y-1 font-bold">
+                    <p>© 2026 Delta South America</p>
+                    <p class="opacity-40">Professional Touring Infrastructure</p>
+                    <p class="pt-4">[32.9442° S, 60.6505° W]</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Parallax suave para los textos del Hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const titles = document.querySelectorAll('.hero-title');
+            titles.forEach((t, i) => {
+                const speed = (i + 1) * 0.1;
+                t.style.transform = `translateX(${scroll * (i % 2 === 0 ? speed : -speed)}px)`;
+            });
+        });
+    </script>
+    <script>
+        // Map Data Logic
+        const cityPoints = document.querySelectorAll('.city-point');
+        const nodeData = document.getElementById('node-data');
+        const nodeName = document.getElementById('node-name');
+        const nodeCoords = document.getElementById('node-coords');
+        const nodeStatus = document.getElementById('node-status');
+
+        // Data Store
+        const nodeInfo = {
+            'rosario': { name: 'ROSARIO [HUB]', coords: '32.94 S, 60.65 W', status: 'OPERATIONAL' },
+            'ba': { name: 'BUENOS AIRES', coords: '34.60 S, 58.38 W', status: 'ACTIVE' },
+            'sp': { name: 'SÃO PAULO', coords: '23.55 S, 46.63 W', status: 'ACTIVE' },
+            'santiago': { name: 'SANTIAGO', coords: '33.44 S, 70.66 W', status: 'ACTIVE' },
+            'lima': { name: 'LIMA', coords: '12.04 S, 77.04 W', status: 'ACTIVE' },
+            'bogota': { name: 'BOGOTÁ', coords: '04.71 N, 74.07 W', status: 'ACTIVE' }
+        };
+
+        cityPoints.forEach(point => {
+            point.addEventListener('mouseenter', (e) => {
+                const id = e.target.getAttribute('data-id');
+                if (nodeInfo[id]) {
+                    nodeName.innerText = nodeInfo[id].name;
+                    nodeCoords.innerText = nodeInfo[id].coords;
+                    nodeStatus.innerText = nodeInfo[id].status;
+                    nodeData.classList.remove('hidden');
+                }
+            });
+            point.addEventListener('mouseleave', () => {
+                // Keep showing last or hide? Let's hide for clean look
+                nodeData.classList.add('hidden');
+            });
+        });
+
+        // Form Logic
+        const form = document.getElementById('inquiry-form');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const originalText = submitBtn.innerText;
+
+            // Simulation State
+            submitBtn.innerText = "TRANSMITTING DATA...";
+            submitBtn.classList.add('bg-white', 'text-black');
+
+            setTimeout(() => {
+                submitBtn.innerText = "PACKET SENT [ACK]";
+                submitBtn.classList.add('bg-orange-500', 'border-orange-500');
+                submitBtn.classList.remove('bg-white', 'text-black', 'hover:bg-white');
+
+                // Reset after success
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.innerText = originalText;
+                    submitBtn.classList.remove('bg-orange-500', 'border-orange-500');
+                    submitBtn.classList.add('hover:bg-white');
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

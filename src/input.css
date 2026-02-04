@@ -1,0 +1,166 @@
+/* src/input.css - Tailwind v3 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-title {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.8;
+    font-size: clamp(4rem, 15vw, 12rem);
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+}
+
+/* =========================
+   MAP STYLES
+   ========================= */
+
+.map-container {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.05));
+}
+
+.city-point {
+    fill: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.city-point:hover {
+    fill: #ff3e00;
+    r: 5;
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+/* =========================
+   ARTIST CARDS
+   ========================= */
+
+.artist-card {
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.artist-card:hover {
+    filter: grayscale(0%);
+    background-color: #111;
+}
+
+.artist-card img {
+    transition: transform 0.7s ease;
+}
+
+.artist-card:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* =========================
+   LEAFLET MAP OVERRIDES
+   ========================= */
+
+.leaflet-container {
+    background: transparent !important;
+}
+
+.leaflet-tile {
+    filter: grayscale(100%) invert(100%) brightness(0.6) contrast(1.2);
+}
+
+.leaflet-control-attribution,
+.leaflet-control-zoom {
+    display: none !important;
+}
+
+/* =========================
+   MARKER STYLES
+   ========================= */
+
+.marker-node {
+    width: 8px;
+    height: 8px;
+    background-color: #6b7280;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.marker-hub {
+    width: 12px;
+    height: 12px;
+    background-color: #FF3E00;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.marker-hub::after {
+    display: none;
+}
+
+/* HOVER STATES - Efecto 3D esférico con contorno neon */
+.marker-highlight .marker-node,
+.marker-highlight .marker-hub {
+    /* EFECTO 3D ESFÉRICO - Gradiente que simula iluminación */
+    background: radial-gradient(ellipse 70% 70% at 30% 30%,
+            rgba(180, 180, 180, 1) 0%,
+            rgba(100, 100, 100, 1) 40%,
+            rgba(60, 60, 60, 1) 70%,
+            rgba(30, 30, 30, 1) 100%) !important;
+    transform: scale(3);
+    box-shadow:
+        /* Sombra interna para profundidad 3D */
+        inset -2px -2px 6px rgba(0, 0, 0, 0.9),
+        inset 1px 1px 4px rgba(255, 255, 255, 0.5),
+
+        /* Contorno EXTERNO SOFT (Premium Glow) - SPREAD 0PX para evitar bordes */
+        0 0 15px 0px rgba(0, 212, 255, 0.6),
+        /* Halo inmediato suave */
+        0 0 30px 0px rgba(0, 136, 255, 0.4),
+        /* Aura azul media */
+        0 0 60px 0px rgba(157, 0, 255, 0.3),
+        /* Haze violeta expansivo */
+        0 0 100px 0px rgba(102, 0, 204, 0.2)
+        /* Dispersión lejana */
+        !important;
+    border: none !important;
+    z-index: 9999;
+}
