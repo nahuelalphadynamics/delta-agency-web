@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DELTA SOUTH AMERICA | AGENCY</title>
+    <title>DELTA SOUTH AMERICA | LOGISTIC & MANAGEMENT</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -13,7 +13,7 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="DELTA Agency | Booking DJs Sudamérica">
+    <meta property="og:title" content="DELTA Logistic & Management | Booking DJs Sudamérica">
     <meta property="og:description"
         content="Infraestructura profesional de touring para artistas de música electrónica en Sudamérica.">
     <meta property="og:image" content="/og-image.jpg">
@@ -24,7 +24,7 @@
     {
       "@context": "https://schema.org",
       "@type": "EntertainmentBusiness",
-      "name": "Delta South America Agency",
+      "name": "Delta South America Logistic & Management",
       "description": "Agencia de booking y management para artistas de música electrónica en Sudamérica.",
       "image": "/DELTALOGOSABLACK.png",
       "url": "https://deltaagency.com",
@@ -50,7 +50,7 @@
     </script>
 
     <!-- Tailwind CSS (Local Build) -->
-    <link href="/styles.css?v=3" rel="stylesheet">
+    <link href="/styles.css?v=4" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -152,15 +152,16 @@
 <body>
 
     <!-- NAV -->
-    <nav class="fixed w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
+    <nav class="fixed w-full z-50 py-4 px-6 flex justify-between items-center mix-blend-difference">
         <div class="flex flex-col">
-            <span class="font-black italic tracking-tighter text-2xl">DELTA</span>
-            <span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Agency</span>
+            <!-- Isologo (Triangle) White on Transparent -->
+            <img src="/logo_v3.png" alt="DELTA" style="height: 24px !important; width: auto;"
+                class="h-6 w-auto filter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
         </div>
         <div class="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-bold">
             <a href="#tours" class="hover:opacity-50 transition-opacity">Next Tours</a>
             <a href="#network" class="hover:opacity-50 transition-opacity">Network</a>
-            <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
+            <a href="#contact" class="hover:opacity-50 transition-opacity">Lets Work</a>
         </div>
     </nav>
 
@@ -171,7 +172,8 @@
             <h1 class="hero-title uppercase text-outline">SOUTH</h1>
             <h1 class="hero-title uppercase">AMERICA</h1>
             <div class="mt-4 md:mt-6">
-                <span class="text-3xl md:text-6xl font-black tracking-[0.15em] uppercase opacity-90">Agency</span>
+                <span class="text-3xl md:text-6xl font-black tracking-[0.15em] uppercase opacity-90">Logistic &
+                    Management</span>
             </div>
         </div>
 
@@ -186,7 +188,7 @@
         <div class="absolute bottom-12 right-6 z-20">
             <a href="#contact"
                 class="hidden md:inline-block border-2 border-cyan-400 text-white px-8 py-4 text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:bg-cyan-400 hover:text-black shadow-[0_0_15px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.6)]">
-                Book Artist
+                Initialise
             </a>
         </div>
 
@@ -207,15 +209,16 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
                 <!-- Artist: Eelke Kleijn (Value Stream: Progressive) -->
-                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
+                <div
+                    class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900 active:bg-zinc-800 transition-colors">
                     <img src="/eelke_kleijn_new.jpg" alt="Eelke Kleijn"
-                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
                     </div>
 
                     <!-- Asset ID -->
                     <div
-                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500">
                         <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: EK-26</span>
                     </div>
 
@@ -223,60 +226,74 @@
                         <div class="flex justify-between items-end mb-2">
                             <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Days Like
                                 Nights</span>
-                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q3
+                            <span
+                                class="text-[9px] mono text-orange-500 hidden group-hover:block group-active:block">WINDOW:
+                                Q3
                                 2026</span>
                         </div>
                         <h3 class="text-4xl font-black uppercase italic tracking-tighter">Eelke Kleijn</h3>
-                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                        <div
+                            class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 group-active:bg-orange-500 transition-colors">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Artist: Oostil (Value Stream: Melodic) -->
-                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
-                    <img src="public/oostil_new.png" alt="Oostil"
-                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                <!-- Artist: Roy Rosenfeld (Value Stream: Melodic) -->
+                <div
+                    class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900 active:bg-zinc-800 transition-colors">
+                    <img src="roy_rosenfeld.jpg?v=1" alt="Roy Rosenfeld"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
                     </div>
 
                     <!-- Asset ID -->
                     <div
-                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: OS-26</span>
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500">
+                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: RR-26</span>
                     </div>
 
                     <div class="absolute bottom-0 p-8 w-full">
                         <div class="flex justify-between items-end mb-2">
+                            <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">All Day I
+                                Dream</span>
                             <span
-                                class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Afterlife</span>
-                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q3
+                                class="text-[9px] mono text-orange-500 hidden group-hover:block group-active:block">WINDOW:
+                                Q3
                                 2026</span>
                         </div>
-                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Oostil</h3>
-                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Roy Rosenfeld</h3>
+                        <div
+                            class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 group-active:bg-orange-500 transition-colors">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Artist: Sven Väth (Value Stream: Legacy) -->
-                <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
-                    <img src="/sven_vath_new.jpg" alt="Sven Väth"
-                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                <!-- Artist: Marco Faraone (Value Stream: Techno) -->
+                <div
+                    class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900 active:bg-zinc-800 transition-colors">
+                    <img src="marco_faraone.jpg?v=1" alt="Marco Faraone"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
                     </div>
 
                     <!-- Asset ID -->
                     <div
-                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: SV-26</span>
+                        class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500">
+                        <span class="text-[9px] mono text-zinc-500 border border-zinc-800 px-2 py-1">ID: MF-26</span>
                     </div>
 
                     <div class="absolute bottom-0 p-8 w-full">
                         <div class="flex justify-between items-end mb-2">
-                            <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Cocoon</span>
-                            <span class="text-[9px] mono text-orange-500 hidden group-hover:block">WINDOW: Q4
+                            <span class="text-[10px] mono text-zinc-400 uppercase tracking-widest block">Uncage</span>
+                            <span
+                                class="text-[9px] mono text-orange-500 hidden group-hover:block group-active:block">WINDOW:
+                                Q4
                                 2026</span>
                         </div>
-                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Sven Väth</h3>
-                        <div class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 transition-colors"></div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter">Marco Faraone</h3>
+                        <div
+                            class="h-[1px] w-full bg-white/20 mt-4 group-hover:bg-orange-500 group-active:bg-orange-500 transition-colors">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,7 +301,7 @@
     </section>
 
     <!-- DELTA CLEAN INTERACTIVE MAP (Leaflet V3 - High Impact) -->
-    <section class="w-full relative py-24 bg-[#050505] border-t border-[#222] overflow-hidden">
+    <section id="network" class="w-full relative py-24 bg-[#050505] border-t border-[#222] overflow-hidden">
 
         <div class="absolute inset-0 z-0 pointer-events-none opacity-20"
             style="background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px); background-size: 40px 40px;">
@@ -293,120 +310,118 @@
         <div class="container mx-auto px-6 relative z-10">
 
             <div
-                class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 h-auto lg:h-[600px] border border-[#1f1f1f] bg-[#020202]">
+                class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 h-auto lg:min-h-[600px] border border-[#1f1f1f] bg-[#020202]">
 
-                <!-- LIST COMMAND PANEL -->
-                <div
-                    class="lg:col-span-4 p-8 flex flex-col justify-between border-r border-[#1f1f1f] relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#020202]">
+                <div class="lg:col-span-4 p-8 flex flex-col border-r border-[#1f1f1f] relative bg-[#0a0a0a]">
 
-                    <div>
+                    <div class="mb-16 relative z-10">
+                        <h2 class="text-4xl md:text-5xl font-black text-white leading-[0.8] tracking-tighter uppercase">
+                            TERRITORIAL</h2>
                         <h2
-                            class="text-[10px] font-bold tracking-[0.4em] text-[#FF3E00] mb-4 flex items-center uppercase">
-                            <span class="w-1.5 h-1.5 bg-[#FF3E00] mr-2 rounded-full animate-pulse"></span>
-                            Network Status
-                        </h2>
-                        <h3 class="text-3xl font-black text-white mb-6 tracking-tighter">ACTIVE<br>NODES</h3>
-                        <p class="text-xs text-[#71717A] font-mono leading-relaxed mb-8 border-l border-[#333] pl-3">
-                            Infraestructura operativa gestionada en tiempo real. Seleccione un nodo para visualizar
-                            coordenadas.
+                            class="text-4xl md:text-5xl font-black text-transparent text-outline leading-[0.8] tracking-tighter uppercase">
+                            NETWORK</h2>
+                        <p
+                            class="mt-6 text-[11px] text-[#71717A] font-mono leading-relaxed max-w-[280px] border-l border-[#333] pl-3">
+                            Operando los hubs más importantes de Sudamérica con precisión técnica y logística de
+                            vanguardia.
                         </p>
                     </div>
 
-                    <div class="space-y-1">
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="rosario">
-                            <div class="flex justify-between items-center">
+                    <div class="grid grid-cols-1 gap-y-14 relative z-10 w-full pl-2" style="row-gap: 3.5rem;">
+                        <!-- ARGENTINA -->
+                        <div class="city-item group cursor-pointer border-l-2 border-transparent hover:border-[#FF3E00] pl-4 transition-all duration-300"
+                            data-target="argentina">
+                            <div class="flex items-center gap-4 mb-1" style="column-gap: 1rem; margin-bottom: 0.25rem;">
                                 <span
-                                    class="text-sm font-bold text-white group-hover:text-[#FF3E00] transition-colors tracking-tight">ROSARIO
-                                    [HUB]</span>
-                                <span class="text-lg opacity-80 group-hover:opacity-100 transition-opacity">🇦🇷</span>
+                                    class="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-[#FF3E00] transition-colors">ARGENTINA</span>
+                                <span
+                                    class="text-sm opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
                             </div>
-                            <div class="flex justify-between items-center mt-1">
-                                <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors">
-                                    COORDINATION CENTER</div>
-                                <div class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></div>
-                            </div>
-                        </div>
-
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="saopaulo">
-                            <div class="flex justify-between items-center">
-                                <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SÃO
-                                    PAULO</span>
-                                <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇧🇷</span>
+                            <div
+                                class="text-[10px] font-bold tracking-[0.2em] text-[#555] uppercase group-hover:text-white transition-colors">
+                                BUENOS AIRES
                             </div>
                         </div>
 
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="santiago">
-                            <div class="flex justify-between items-center">
+                        <!-- BRASIL -->
+                        <div class="city-item group cursor-pointer border-l-2 border-transparent hover:border-[#FF3E00] pl-4 transition-all duration-300"
+                            data-target="brasil">
+                            <div class="flex items-center gap-4 mb-1" style="column-gap: 1rem; margin-bottom: 0.25rem;">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SANTIAGO</span>
+                                    class="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-[#FF3E00] transition-colors">BRASIL</span>
                                 <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇨🇱</span>
+                                    class="text-sm opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇧🇷</span>
+                            </div>
+                            <div
+                                class="text-[10px] font-bold tracking-[0.2em] text-[#555] uppercase group-hover:text-white transition-colors">
+                                BRASILIA
                             </div>
                         </div>
 
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="asuncion">
-                            <div class="flex justify-between items-center">
+                        <!-- CHILE -->
+                        <div class="city-item group cursor-pointer border-l-2 border-transparent hover:border-[#FF3E00] pl-4 transition-all duration-300"
+                            data-target="chile">
+                            <div class="flex items-center gap-4 mb-1" style="column-gap: 1rem; margin-bottom: 0.25rem;">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">ASUNCIÓN</span>
+                                    class="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-[#FF3E00] transition-colors">CHILE</span>
                                 <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇵🇾</span>
+                                    class="text-sm opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇨🇱</span>
+                            </div>
+                            <div
+                                class="text-[10px] font-bold tracking-[0.2em] text-[#555] uppercase group-hover:text-white transition-colors">
+                                SANTIAGO
                             </div>
                         </div>
 
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="buenosaires">
-                            <div class="flex justify-between items-center">
+                        <!-- PARAGUAY -->
+                        <div class="city-item group cursor-pointer border-l-2 border-transparent hover:border-[#FF3E00] pl-4 transition-all duration-300"
+                            data-target="paraguay">
+                            <div class="flex items-center gap-4 mb-1" style="column-gap: 1rem; margin-bottom: 0.25rem;">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">BUENOS
-                                    AIRES</span>
+                                    class="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-[#FF3E00] transition-colors">PARAGUAY</span>
                                 <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
+                                    class="text-sm opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇵🇾</span>
+                            </div>
+                            <div
+                                class="text-[10px] font-bold tracking-[0.2em] text-[#555] uppercase group-hover:text-white transition-colors">
+                                ASUNCIÓN
                             </div>
                         </div>
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="cordoba">
-                            <div class="flex justify-between items-center">
+
+                        <!-- URUGUAY -->
+                        <div class="city-item group cursor-pointer border-l-2 border-transparent hover:border-[#FF3E00] pl-4 transition-all duration-300"
+                            data-target="uruguay">
+                            <div class="flex items-center gap-4 mb-1" style="column-gap: 1rem; margin-bottom: 0.25rem;">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">CÓRDOBA</span>
+                                    class="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-[#FF3E00] transition-colors">URUGUAY</span>
                                 <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
+                                    class="text-sm opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇺🇾</span>
+                            </div>
+                            <div
+                                class="text-[10px] font-bold tracking-[0.2em] text-[#555] uppercase group-hover:text-white transition-colors">
+                                MONTEVIDEO
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-4 border-t border-[#222] flex justify-between items-center">
-                        <div class="text-[9px] text-[#444] font-mono">DATA_STREAM: CONNECTED</div>
-                        <div class="flex gap-1">
-                            <div class="w-3 h-0.5 bg-[#FF3E00] animate-pulse"></div>
-                            <div class="w-1 h-0.5 bg-[#FF3E00] animate-pulse delay-75"></div>
-                            <div class="w-1 h-0.5 bg-[#FF3E00] animate-pulse delay-150"></div>
-                        </div>
-                    </div>
+
                 </div>
-
                 <!-- MAP CONTAINER -->
-                <div class="lg:col-span-8 relative bg-black h-[400px] lg:h-auto group">
-
+                <div class="lg:col-span-8 relative bg-black h-[400px] lg:h-auto group min-h-[600px]">
                     <div class="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,1)] z-[400] pointer-events-none">
                     </div>
-                    <!-- (REMOVED) Fixed red line scanner was here -->
 
                     <div id="clean-map" class="w-full h-full bg-[#050505] z-0 contrast-[120%] brightness-75"></div>
 
                     <div
                         class="absolute bottom-6 right-6 z-[500] text-right pointer-events-none bg-black/80 p-2 border border-[#333] backdrop-blur-sm">
                         <div class="text-[10px] text-[#FF3E00] font-mono mb-1">LIVE INFRASTRUCTURE</div>
-                        <div class="text-[9px] text-[#555] font-mono">LAT: -32.94 | LONG: -60.65</div>
+                        <div class="text-[9px] text-[#555] font-mono">LAT: -34.60 | LONG: -58.38</div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -418,22 +433,20 @@
             border: none;
         }
 
-        /* HUB: Punto Naranja Pulsante */
+        /* HUB: Punto Blanco (Igual que nodos pero mas grande) */
         .marker-hub {
             width: 12px;
             height: 12px;
-            background-color: #FF3E00;
+            background-color: #ffffff;
             border-radius: 50%;
-            box-shadow: 0 0 20px #FF3E00;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid #000;
+            border: 1px solid #000;
             position: relative;
         }
 
-        /* Efecto de onda expansiva - DESACTIVADO para look más limpio */
+        /* Efecto de onda expansiva - DESACTIVADO */
         .marker-hub::after {
             display: none;
-            /* Removido para eliminar anillo rojo */
         }
 
         /* OCULTAR anillo rojo cuando está iluminado */
@@ -445,34 +458,27 @@
         .marker-node {
             width: 8px;
             height: 8px;
-            background-color: #444;
+            background-color: #888;
             border-radius: 50%;
             border: 1px solid #000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* HOVER STATES - Efecto 3D esférico con contorno neon */
+        .marker-node:hover,
+        .marker-hub:hover,
         .marker-highlight .marker-node,
         .marker-highlight .marker-hub {
             /* EFECTO 3D ESFÉRICO - Gradiente que simula iluminación */
             background: radial-gradient(ellipse 70% 70% at 30% 30%,
-                    rgba(180, 180, 180, 1) 0%,
-                    rgba(100, 100, 100, 1) 40%,
-                    rgba(60, 60, 60, 1) 70%,
-                    rgba(30, 30, 30, 1) 100%) !important;
-            transform: scale(3);
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(200, 200, 200, 1) 100%) !important;
+            transform: scale(1.6);
+            /* Sombreado de iluminación azul INTENSO pero ajustado al tamaño */
             box-shadow:
-                /* Sombra interna para profundidad */
-                inset -2px -2px 4px rgba(0, 0, 0, 0.5),
-                inset 2px 2px 4px rgba(255, 255, 255, 0.2),
-                /* Contorno neon exterior */
-                0 0 0 2px rgba(0, 212, 255, 0.8),
-                0 0 8px rgba(0, 212, 255, 1),
-                0 0 15px rgba(0, 136, 255, 0.9),
-                0 0 25px rgba(0, 136, 255, 0.7),
-                0 0 40px rgba(157, 0, 255, 0.5),
-                0 0 60px rgba(157, 0, 255, 0.3),
-                0 0 90px rgba(102, 0, 204, 0.2) !important;
+                0 0 15px 4px rgba(0, 190, 255, 0.9),
+                0 0 30px 15px rgba(0, 120, 255, 0.6),
+                0 0 60px 30px rgba(0, 80, 255, 0.4) !important;
             border: none !important;
             z-index: 9999;
         }
@@ -517,30 +523,45 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
-            // 1. Configuración del Mapa
+            // 1. Configuración del Mapa (Mobile Static)
+            var isMobile = window.innerWidth < 768; // Simple check for mobile
+
             var map = L.map('clean-map', {
-                center: [-28.000, -58.000],
+                center: [-34.6037, -58.3816], // Start at Buenos Aires
                 zoom: 4,
                 zoomControl: false,
                 scrollWheelZoom: false, // Bloquear scroll para evitar accidentes
-                attributionControl: false
+                attributionControl: false,
+                dragging: !isMobile, // Disable dragging on mobile
+                tap: !isMobile, // Disable tap handling (zoom etc) on mobile, use custom events
+                touchZoom: !isMobile, // Disable touch zoom
+                doubleClickZoom: !isMobile,
+                boxZoom: !isMobile
             });
 
-            // 2. Capa Oscura (Dark Matter) - Sin etiquetas para limpieza total
+            // Usar ImageOverlay con la imagen subida (map_bg.png)
+            var imageUrl = '/map_bg.png';
+            var errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
+            var altText = 'Mapa de Sudamérica';
+            var latLngBounds = L.latLngBounds([[-60, -90], [15, -30]]); // Ajustar bounds aproximados para Sudamérica
+
+            // 2. Capa Oscura (Dark Matter) - RESTORED
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-                attribution: '© OpenStreetMap contributors',
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 subdomains: 'abcd',
-                maxZoom: 19
+                maxZoom: 20
             }).addTo(map);
+
+            // Removed ImageOverlay logic to restore full interactivity
 
             // 3. Datos de las Ciudades (Incluyendo Banderas)
             const cities = {
-                'rosario': { coords: [-32.9442, -60.6505], type: 'hub', flag: '🇦🇷', label: 'ROSARIO' },
-                'saopaulo': { coords: [-23.5505, -46.6333], type: 'node', flag: '🇧🇷', label: 'SÃO PAULO' },
-                'santiago': { coords: [-33.4489, -70.6693], type: 'node', flag: '🇨🇱', label: 'SANTIAGO' },
+                'argentina': { coords: [-34.6037, -58.3816], type: 'hub', flag: '🇦🇷', label: 'BUENOS AIRES' },
+                'brasil': { coords: [-15.7975, -47.8919], type: 'node', flag: '🇧🇷', label: 'BRASILIA' },
+                'chile': { coords: [-33.4489, -70.6693], type: 'node', flag: '🇨🇱', label: 'SANTIAGO' },
                 'asuncion': { coords: [-25.2637, -57.5759], type: 'node', flag: '🇵🇾', label: 'ASUNCIÓN' },
-                'buenosaires': { coords: [-34.6037, -58.3816], type: 'node', flag: '🇦🇷', label: 'BUENOS AIRES' },
-                'cordoba': { coords: [-31.4201, -64.1888], type: 'node', flag: '🇦🇷', label: 'CÓRDOBA' }
+                'paraguay': { coords: [-25.2637, -57.5759], type: 'node', flag: '🇵🇾', label: 'ASUNCIÓN' },
+                'uruguay': { coords: [-34.9011, -56.1645], type: 'node', flag: '🇺🇾', label: 'MONTEVIDEO' }
             };
 
             // Almacén de marcadores
@@ -550,12 +571,11 @@
 
             // 4. Crear Marcadores + Tooltips
             for (const [key, data] of Object.entries(cities)) {
+                // Skip duplicate key logic if needed, but since we use data-target matches, it is fine.
+                if (key === 'asuncion') continue;
 
-                // FIXED: Colocamos la clase visual EN UN DIV INTERNO
-                // Leaflet controla la posición del div exterior (className)
-                // Nosotros animamos el div interior (html)
                 const customIcon = L.divIcon({
-                    className: 'custom-map-icon', // Clase neutra para el contenedor
+                    className: 'custom-map-icon',
                     html: `<div class="${data.type === 'hub' ? 'marker-hub' : 'marker-node'}"></div>`,
                     iconSize: data.type === 'hub' ? [12, 12] : [8, 8],
                     iconAnchor: data.type === 'hub' ? [6, 6] : [4, 4]
@@ -563,13 +583,27 @@
 
                 const marker = L.marker(data.coords, { icon: customIcon }).addTo(map);
 
-                // Tooltip con Bandera (oculto por defecto)
                 marker.bindTooltip(`${data.flag} ${data.label}`, {
                     permanent: false,
                     direction: 'top',
                     className: 'flag-tooltip',
                     offset: [0, -10],
                     opacity: 1
+                });
+
+                // Add Click/Tap Interaction for Mobile
+                marker.on('click', function (e) {
+                    // Reset all others
+                    Object.values(markers).forEach(m => {
+                        const el = m.getElement();
+                        if (el) el.classList.remove('marker-highlight');
+                        m.closeTooltip();
+                    });
+
+                    // Highlight this one
+                    const el = this.getElement();
+                    if (el) el.classList.add('marker-highlight');
+                    this.openTooltip();
                 });
 
                 markers[key] = marker;
@@ -586,20 +620,16 @@
                     const targetMarker = markers[targetKey];
 
                     if (targetMarker) {
+                        // Reset all others first
+                        Object.values(markers).forEach(m => {
+                            const el = m.getElement();
+                            if (el) el.classList.remove('marker-highlight');
+                            m.closeTooltip();
+                        });
+
                         const iconElement = targetMarker.getElement();
                         if (iconElement) {
-                            const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
-                            if (visualDot) {
-                                // FIX DEFINITIVO: Pure Light (Scale 1.5)
-                                visualDot.style.transform = 'scale(1.5)';
-                                visualDot.style.background = '#FFFFFF';
-                                visualDot.style.boxShadow = `
-                                    0 0 10px 2px rgba(0, 212, 255, 0.8),
-                                    0 0 20px 10px rgba(0, 136, 255, 0.5),
-                                    0 0 60px 20px rgba(157, 0, 255, 0.3)
-                                `;
-                                visualDot.style.zIndex = '9999';
-                            }
+                            // JS CLEANUP: Removed inline style injection. Relies purely on CSS class.
                             iconElement.classList.add('marker-highlight');
                             iconElement.style.zIndex = '10000';
 
@@ -619,14 +649,7 @@
                     if (targetMarker) {
                         const iconElement = targetMarker.getElement();
                         if (iconElement) {
-                            const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
-                            if (visualDot) {
-                                visualDot.style.background = '';
-                                visualDot.style.transform = '';
-                                visualDot.style.boxShadow = '';
-                                visualDot.style.border = '';
-                                visualDot.style.zIndex = '';
-                            }
+                            // JS CLEANUP: Removed inline style clearing.
                             iconElement.classList.remove('marker-highlight');
                             iconElement.style.zIndex = '';
                         }
@@ -639,7 +662,6 @@
                 item.addEventListener('mouseleave', deactivateMarker);
                 // Touch Intuitivo: Al hacer click/tap también activa
                 item.addEventListener('click', (e) => {
-                    // Prevenir doble disparo si es híbrido, pero simple es mejor
                     activateMarker();
                 });
             });
@@ -650,85 +672,6 @@
             }
         });
     </script>
-
-    <!-- CONTACT / FOOTER -->
-    <footer id="contact" class="bg-white text-black py-24 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
-            <div class="flex-1 max-w-xl">
-                <span class="text-[10px] font-black uppercase tracking-[0.5em] mb-8 block">Strategic Inquiry</span>
-
-                <form id="bookingForm" class="space-y-6 relative">
-                    <!-- 1. Honeypot Anti-Bot (Hidden) -->
-                    <div class="hidden" aria-hidden="true">
-                        <input type="text" name="b_l_o_c_k" tabindex="-1" value="">
-                    </div>
-
-                    <!-- 2. Campos de Identidad -->
-                    <div class="group">
-                        <label for="name"
-                            class="block text-[10px] mono uppercase text-zinc-500 mb-2 tracking-widest group-focus-within:text-neon-blue transition-colors">
-                            ENTITY IDENTITY
-                        </label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full bg-black border-b border-zinc-800 text-white py-3 px-2 focus:border-neon-blue focus:outline-none transition-all placeholder-zinc-700 font-bold uppercase text-sm"
-                            placeholder="NOMBRE O PRODUCTORA">
-                    </div>
-
-                    <div class="group">
-                        <label for="email"
-                            class="block text-[10px] mono uppercase text-zinc-500 mb-2 tracking-widest group-focus-within:text-neon-blue transition-colors">
-                            TRANSMISSION CHANNEL
-                        </label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full bg-black border-b border-zinc-800 text-white py-3 px-2 focus:border-neon-blue focus:outline-none transition-all placeholder-zinc-700 font-mono text-sm"
-                            placeholder="EMAIL_DIRECTO@EJEMPLO.COM">
-                    </div>
-
-                    <div class="group">
-                        <label for="message"
-                            class="block text-[10px] mono uppercase text-zinc-500 mb-2 tracking-widest group-focus-within:text-neon-blue transition-colors">
-                            DATA PACKET
-                        </label>
-                        <textarea id="message" name="message" rows="4" required
-                            class="w-full bg-black border-b border-zinc-800 text-white py-3 px-2 focus:border-neon-blue focus:outline-none transition-all placeholder-zinc-700 font-mono text-sm resize-none"
-                            placeholder="DETALLES DEL EVENTO, FECHA, VENUE, PRESUPUESTO..."></textarea>
-                    </div>
-
-                    <!-- 3. Botón de Acción -->
-                    <button type="submit" id="submitBtn"
-                        class="w-full border-2 border-white text-white py-4 text-[11px] font-black tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
-                        <span id="btnText">INITIALIZE REQUEST</span>
-                        <span id="btnLoader" class="hidden animate-pulse">PROCESSING...</span>
-                    </button>
-
-                    <!-- 4. Feedback Visual -->
-                    <div id="formFeedback" class="hidden mt-4 text-center text-xs font-mono tracking-widest"></div>
-                </form>
-
-                <div class="mt-16 flex gap-8">
-                    <a href="#"
-                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Instagram</a>
-                    <a href="#"
-                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Resident
-                        Advisor</a>
-                    <a href="#"
-                        class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="text-right">
-                <div class="w-40 mb-8 ml-auto">
-                    <img src="DELTALOGOSABLACK.png" alt="DELTA" class="w-full h-auto">
-                </div>
-                <div class="text-[10px] mono uppercase space-y-1 font-bold">
-                    <p>© 2026 Delta South America</p>
-                    <p class="opacity-40">Professional Touring Infrastructure</p>
-                    <p class="pt-4">[32.9442° S, 60.6505° W]</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script>
         // Parallax suave para los textos del Hero
         window.addEventListener('scroll', () => {
@@ -740,133 +683,51 @@
             });
         });
     </script>
-    <script>
-        // Map Data Logic
-        const cityPoints = document.querySelectorAll('.city-point');
-        const nodeData = document.getElementById('node-data');
-        const nodeName = document.getElementById('node-name');
-        const nodeCoords = document.getElementById('node-coords');
-        const nodeStatus = document.getElementById('node-status');
 
-        // Data Store
-        const nodeInfo = {
-            'rosario': { name: 'ROSARIO [HUB]', coords: '32.94 S, 60.65 W', status: 'OPERATIONAL' },
-            'ba': { name: 'BUENOS AIRES', coords: '34.60 S, 58.38 W', status: 'ACTIVE' },
-            'sp': { name: 'SÃO PAULO', coords: '23.55 S, 46.63 W', status: 'ACTIVE' },
-            'santiago': { name: 'SANTIAGO', coords: '33.44 S, 70.66 W', status: 'ACTIVE' },
-            'lima': { name: 'LIMA', coords: '12.04 S, 77.04 W', status: 'ACTIVE' },
-            'bogota': { name: 'BOGOTÁ', coords: '04.71 N, 74.07 W', status: 'ACTIVE' }
-        };
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact"
+        class="bg-white text-black px-6 min-h-[60vh] flex flex-col justify-between pt-12 pb-12 md:pb-0">
+        <!-- TOP ROW -->
+        <div class="flex justify-between items-stretch w-full flex-grow">
+            <!-- Let's Work (Left) -->
+            <div class="w-1/2 md:w-auto flex items-center">
+                <a href="mailto:info@deltaagency.com"
+                    class="block text-[14vw] md:text-[8rem] font-black uppercase tracking-tighter hover:text-[#FF3E00] transition-colors leading-[0.7] -ml-2 md:-ml-4 break-words">
+                    LET'S WORK
+                </a>
+            </div>
 
-        cityPoints.forEach(point => {
-            point.addEventListener('mouseenter', (e) => {
-                const id = e.target.getAttribute('data-id');
-                if (nodeInfo[id]) {
-                    nodeName.innerText = nodeInfo[id].name;
-                    nodeCoords.innerText = nodeInfo[id].coords;
-                    nodeStatus.innerText = nodeInfo[id].status;
-                    nodeData.classList.remove('hidden');
-                }
-            });
-            point.addEventListener('mouseleave', () => {
-                // Keep showing last or hide? Let's hide for clean look
-                nodeData.classList.add('hidden');
-            });
-        });
+            <!-- Logo + Details (Right) -->
+            <div class="w-1/2 md:w-auto flex flex-col items-end text-right">
+                <div class="w-20 md:w-32 mt-2 mb-1" style="max-width: 150px;">
+                    <img src="/logo_delta_cropped.png?v=3" alt="DELTA" class="w-full h-auto">
+                </div>
+                <!-- Details moved under logo -->
+                <div class="text-[10px] mono uppercase space-y-1 font-bold">
+                    <p>© 2026 Delta South America</p>
+                    <p class="opacity-40">Professional Touring Infrastructure</p>
+                    <p class="pt-4">[32.9442° S, 60.6505° W]</p>
+                    <p class="pt-2">© 2026</p>
+                </div>
+            </div>
+        </div>
 
-        // THE LEAD MACHINE - Form Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('bookingForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const btnLoader = document.getElementById('btnLoader');
-            const feedback = document.getElementById('formFeedback');
+        <!-- BOTTOM ROW (Desktop Only / Mobile different order?) -->
+        <!-- Mobile needs Socials at bottom, Desktop needs Socials Left and Coords Right -->
+        <div class="flex flex-col md:flex-row justify-between items-end w-full gap-8 mt-auto md:pb-12">
+            <!-- Socials (Mobile Bottom, Desktop Left) -->
+            <div class="order-2 md:order-1 flex justify-center md:justify-start gap-8 w-full md:w-auto">
+                <a href="#"
+                    class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Instagram</a>
+                <a href="#"
+                    class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">Resident
+                    Advisor</a>
+                <a href="#"
+                    class="text-[10px] font-bold uppercase tracking-widest hover:text-zinc-500 transition-colors">LinkedIn</a>
+            </div>
 
-            // 🔑 CLAVE DE ACCESO ACTIVADA
-            const ACCESS_KEY = '3e72af36-6d56-4ad8-be53-e0b11e6f7bf1';
-
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                // 1. Seguridad Anti-Bot (Honeypot Check)
-                const honeypot = form.querySelector('input[name="b_l_o_c_k"]');
-                if (honeypot && honeypot.value) {
-                    console.warn('Bot detectado. Envío cancelado.');
-                    return;
-                }
-
-                // 2. UI: Activar estado de carga
-                setLoadingState(true);
-                feedback.classList.add('hidden');
-
-                // 3. Preparar los datos
-                const formData = new FormData(form);
-                formData.append('access_key', ACCESS_KEY);
-                formData.append('subject', 'Nuevo Lead - Delta Agency Site');
-                formData.append('from_name', 'Delta Booking System');
-
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-
-                try {
-                    // 4. Enviar a la API (Web3Forms)
-                    // NOTA: Si no tienes KEY, esto fallará, pero el UI simula el proceso
-                    /* const response = await fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        body: json,
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
-                    }); 
-                    const result = await response.json(); 
-                    if (response.status === 200) { ... } */
-
-                    // SIMULACIÓN DE ÉXITO (Para demostración hasta que pongas la Key)
-                    await new Promise(r => setTimeout(r, 2000));
-
-                    // DESCOMENTAR ESTO CUANDO TENGAS LA KEY:
-                    /*
-                    if (false) { // Cambiar a response.status === 200
-                        showFeedback('success', 'TRANSMISSION COMPLETE. AGENT WILL CONTACT YOU.');
-                        form.reset();
-                    } else {
-                        // showFeedback('error', 'TRANSMISSION ERROR. PLEASE TRY AGAIN. ' + result.message);
-                    }
-                    */
-
-                    // Feedback Simulado
-                    showFeedback('success', 'TRANSMISSION COMPLETE. [DEMO MODE]');
-                    form.reset();
-
-                } catch (error) {
-                    console.error(error);
-                    showFeedback('error', 'CONNECTION FAILED. CHECK NETWORK.');
-                } finally {
-                    setLoadingState(false);
-                }
-            });
-
-            function setLoadingState(isLoading) {
-                if (isLoading) {
-                    submitBtn.disabled = true;
-                    btnText.classList.add('hidden');
-                    btnLoader.classList.remove('hidden');
-                } else {
-                    submitBtn.disabled = false;
-                    btnText.classList.remove('hidden');
-                    btnLoader.classList.add('hidden');
-                }
-            }
-
-            function showFeedback(type, message) {
-                feedback.textContent = message;
-                feedback.classList.remove('hidden');
-                if (type === 'success') {
-                    feedback.className = 'mt-4 text-center text-xs font-mono text-green-400 tracking-widest';
-                } else {
-                    feedback.className = 'mt-4 text-center text-xs font-mono text-red-500 tracking-widest';
-                }
-            }
-        });
-    </script>
+        </div>
+    </footer>
 </body>
 
 </html>

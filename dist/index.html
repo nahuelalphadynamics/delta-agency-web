@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DELTA SOUTH AMERICA | AGENCY</title>
+    <title>DELTA SOUTH AMERICA | LOGISTIC & MANAGEMENT</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -13,7 +13,7 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="DELTA Agency | Booking DJs Sudamérica">
+    <meta property="og:title" content="DELTA Logistic & Management | Booking DJs Sudamérica">
     <meta property="og:description"
         content="Infraestructura profesional de touring para artistas de música electrónica en Sudamérica.">
     <meta property="og:image" content="/og-image.jpg">
@@ -24,7 +24,7 @@
     {
       "@context": "https://schema.org",
       "@type": "EntertainmentBusiness",
-      "name": "Delta South America Agency",
+      "name": "Delta South America Logistic & Management",
       "description": "Agencia de booking y management para artistas de música electrónica en Sudamérica.",
       "image": "/DELTALOGOSABLACK.png",
       "url": "https://deltaagency.com",
@@ -49,7 +49,8 @@
     }
     </script>
 
-    <!-- Tailwind CSS (compiled locally) -->
+    <!-- Tailwind CSS (Local Build) -->
+    <link href="/styles.css?v=3" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -146,7 +147,6 @@
             background: #333;
         }
     </style>
-  <link rel="stylesheet" crossorigin href="/assets/index-CSjEtIQ5.css">
 </head>
 
 <body>
@@ -155,12 +155,12 @@
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
         <div class="flex flex-col">
             <span class="font-black italic tracking-tighter text-2xl">DELTA</span>
-            <span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Agency</span>
+            <span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Logistic & Management</span>
         </div>
         <div class="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-bold">
             <a href="#tours" class="hover:opacity-50 transition-opacity">Next Tours</a>
             <a href="#network" class="hover:opacity-50 transition-opacity">Network</a>
-            <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
+            <a href="#contact" class="hover:opacity-50 transition-opacity">Lets Work</a>
         </div>
     </nav>
 
@@ -171,7 +171,8 @@
             <h1 class="hero-title uppercase text-outline">SOUTH</h1>
             <h1 class="hero-title uppercase">AMERICA</h1>
             <div class="mt-4 md:mt-6">
-                <span class="text-3xl md:text-6xl font-black tracking-[0.15em] uppercase opacity-90">Agency</span>
+                <span class="text-3xl md:text-6xl font-black tracking-[0.15em] uppercase opacity-90">Logistic &
+                    Management</span>
             </div>
         </div>
 
@@ -185,8 +186,8 @@
         <!-- CTA Above the Fold - Bottom Right -->
         <div class="absolute bottom-12 right-6 z-20">
             <a href="#contact"
-                class="inline-block border-2 border-cyan-400 text-white px-8 py-4 text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:bg-cyan-400 hover:text-black shadow-[0_0_15px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.6)]">
-                Book Artist
+                class="hidden md:inline-block border-2 border-cyan-400 text-white px-8 py-4 text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:bg-cyan-400 hover:text-black shadow-[0_0_15px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.6)]">
+                Initialise
             </a>
         </div>
 
@@ -208,8 +209,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
                 <!-- Artist: Eelke Kleijn (Value Stream: Progressive) -->
                 <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop"
-                        alt="Eelke Kleijn"
+                    <img src="/eelke_kleijn_new.jpg" alt="Eelke Kleijn"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
                     </div>
@@ -259,8 +259,7 @@
 
                 <!-- Artist: Sven Väth (Value Stream: Legacy) -->
                 <div class="artist-card relative group overflow-hidden aspect-[4/5] border border-white/5 bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=2070&auto=format&fit=crop"
-                        alt="Sven Väth"
+                    <img src="/sven_vath_new.jpg" alt="Sven Väth"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90">
                     </div>
@@ -286,7 +285,7 @@
     </section>
 
     <!-- DELTA CLEAN INTERACTIVE MAP (Leaflet V3 - High Impact) -->
-    <section class="w-full relative py-24 bg-[#050505] border-t border-[#222] overflow-hidden">
+    <section id="network" class="w-full relative py-24 bg-[#050505] border-t border-[#222] overflow-hidden">
 
         <div class="absolute inset-0 z-0 pointer-events-none opacity-20"
             style="background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px); background-size: 40px 40px;">
@@ -309,76 +308,72 @@
                         </h2>
                         <h3 class="text-3xl font-black text-white mb-6 tracking-tighter">ACTIVE<br>NODES</h3>
                         <p class="text-xs text-[#71717A] font-mono leading-relaxed mb-8 border-l border-[#333] pl-3">
-                            Infraestructura operativa gestionada en tiempo real. Seleccione un nodo para visualizar
-                            coordenadas.
+                            Infraestructura operativa gestionada en tiempo real. Seleccione un país para visualizar
+                            capital.
                         </p>
                     </div>
 
                     <div class="space-y-1">
                         <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="rosario">
+                            data-target="argentina">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-sm font-bold text-white group-hover:text-[#FF3E00] transition-colors tracking-tight">ROSARIO
-                                    [HUB]</span>
+                                    class="text-sm font-bold text-white group-hover:text-[#FF3E00] transition-colors tracking-tight">ARGENTINA</span>
                                 <span class="text-lg opacity-80 group-hover:opacity-100 transition-opacity">🇦🇷</span>
                             </div>
                             <div class="flex justify-between items-center mt-1">
                                 <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors">
-                                    COORDINATION CENTER</div>
+                                    BUENOS AIRES [HUB]</div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></div>
                             </div>
                         </div>
 
                         <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="saopaulo">
+                            data-target="brasil">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SÃO
-                                    PAULO</span>
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">BRASIL</span>
                                 <span
                                     class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇧🇷</span>
                             </div>
+                            <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors mt-1">
+                                BRASILIA</div>
                         </div>
 
                         <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="santiago">
+                            data-target="chile">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">SANTIAGO</span>
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">CHILE</span>
                                 <span
                                     class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇨🇱</span>
                             </div>
+                            <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors mt-1">
+                                SANTIAGO</div>
                         </div>
 
                         <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="asuncion">
+                            data-target="paraguay">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">ASUNCIÓN</span>
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">PARAGUAY</span>
                                 <span
                                     class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇵🇾</span>
                             </div>
+                            <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors mt-1">
+                                ASUNCIÓN</div>
                         </div>
 
                         <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="buenosaires">
+                            data-target="uruguay">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">BUENOS
-                                    AIRES</span>
+                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">URUGUAY</span>
                                 <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
+                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇺🇾</span>
                             </div>
-                        </div>
-                        <div class="city-item group cursor-pointer p-3 border border-transparent hover:border-[#333] hover:bg-[#111] transition-all duration-300"
-                            data-target="cordoba">
-                            <div class="flex justify-between items-center">
-                                <span
-                                    class="text-sm font-bold text-[#A1A1AA] group-hover:text-white transition-colors tracking-tight">CÓRDOBA</span>
-                                <span
-                                    class="text-lg opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all">🇦🇷</span>
-                            </div>
+                            <div class="text-[9px] font-mono text-[#555] group-hover:text-white transition-colors mt-1">
+                                MONTEVIDEO</div>
                         </div>
                     </div>
 
@@ -397,14 +392,13 @@
 
                     <div class="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,1)] z-[400] pointer-events-none">
                     </div>
-                    <!-- (REMOVED) Fixed red line scanner was here -->
 
                     <div id="clean-map" class="w-full h-full bg-[#050505] z-0 contrast-[120%] brightness-75"></div>
 
                     <div
                         class="absolute bottom-6 right-6 z-[500] text-right pointer-events-none bg-black/80 p-2 border border-[#333] backdrop-blur-sm">
                         <div class="text-[10px] text-[#FF3E00] font-mono mb-1">LIVE INFRASTRUCTURE</div>
-                        <div class="text-[9px] text-[#555] font-mono">LAT: -32.94 | LONG: -60.65</div>
+                        <div class="text-[9px] text-[#555] font-mono">LAT: -34.60 | LONG: -58.38</div>
                     </div>
                 </div>
 
@@ -521,7 +515,7 @@
 
             // 1. Configuración del Mapa
             var map = L.map('clean-map', {
-                center: [-28.000, -58.000],
+                center: [-34.6037, -58.3816], // Start at Buenos Aires
                 zoom: 4,
                 zoomControl: false,
                 scrollWheelZoom: false, // Bloquear scroll para evitar accidentes
@@ -537,12 +531,12 @@
 
             // 3. Datos de las Ciudades (Incluyendo Banderas)
             const cities = {
-                'rosario': { coords: [-32.9442, -60.6505], type: 'hub', flag: '🇦🇷', label: 'ROSARIO' },
-                'saopaulo': { coords: [-23.5505, -46.6333], type: 'node', flag: '🇧🇷', label: 'SÃO PAULO' },
-                'santiago': { coords: [-33.4489, -70.6693], type: 'node', flag: '🇨🇱', label: 'SANTIAGO' },
+                'argentina': { coords: [-34.6037, -58.3816], type: 'hub', flag: '🇦🇷', label: 'BUENOS AIRES' },
+                'brasil': { coords: [-15.7975, -47.8919], type: 'node', flag: '🇧🇷', label: 'BRASILIA' },
+                'chile': { coords: [-33.4489, -70.6693], type: 'node', flag: '🇨🇱', label: 'SANTIAGO' },
                 'asuncion': { coords: [-25.2637, -57.5759], type: 'node', flag: '🇵🇾', label: 'ASUNCIÓN' },
-                'buenosaires': { coords: [-34.6037, -58.3816], type: 'node', flag: '🇦🇷', label: 'BUENOS AIRES' },
-                'cordoba': { coords: [-31.4201, -64.1888], type: 'node', flag: '🇦🇷', label: 'CÓRDOBA' }
+                'paraguay': { coords: [-25.2637, -57.5759], type: 'node', flag: '🇵🇾', label: 'ASUNCIÓN' },
+                'uruguay': { coords: [-34.9011, -56.1645], type: 'node', flag: '🇺🇾', label: 'MONTEVIDEO' }
             };
 
             // Almacén de marcadores
@@ -552,12 +546,11 @@
 
             // 4. Crear Marcadores + Tooltips
             for (const [key, data] of Object.entries(cities)) {
+                // Skip duplicate key logic if needed, but since we use data-target matches, it is fine.
+                if (key === 'asuncion') continue;
 
-                // FIXED: Colocamos la clase visual EN UN DIV INTERNO
-                // Leaflet controla la posición del div exterior (className)
-                // Nosotros animamos el div interior (html)
                 const customIcon = L.divIcon({
-                    className: 'custom-map-icon', // Clase neutra para el contenedor
+                    className: 'custom-map-icon',
                     html: `<div class="${data.type === 'hub' ? 'marker-hub' : 'marker-node'}"></div>`,
                     iconSize: data.type === 'hub' ? [12, 12] : [8, 8],
                     iconAnchor: data.type === 'hub' ? [6, 6] : [4, 4]
@@ -565,7 +558,6 @@
 
                 const marker = L.marker(data.coords, { icon: customIcon }).addTo(map);
 
-                // Tooltip con Bandera (oculto por defecto)
                 marker.bindTooltip(`${data.flag} ${data.label}`, {
                     permanent: false,
                     direction: 'top',
@@ -582,64 +574,66 @@
 
             listItems.forEach(item => {
 
-                // HOVER IN
-                item.addEventListener('mouseenter', () => {
+                // Helper para activar el marcador (Reutilizable)
+                const activateMarker = () => {
                     const targetKey = item.getAttribute('data-target');
                     const targetMarker = markers[targetKey];
 
                     if (targetMarker) {
                         const iconElement = targetMarker.getElement();
                         if (iconElement) {
-                            // Encontrar el div visual interno
                             const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
                             if (visualDot) {
-                                // EFECTO PREMIUM: Solo iluminar contorno, mantener gris
-                                // NO cambiar background - mantener color original
-                                visualDot.style.transform = 'scale(3)';
-                                // CONTORNO NEON SUAVE - Múltiples capas de glow
+                                // FIX DEFINITIVO: Pure Light (Scale 1.5)
+                                visualDot.style.transform = 'scale(1.5)';
+                                visualDot.style.background = '#FFFFFF';
                                 visualDot.style.boxShadow = `
-                                    0 0 0 2px rgba(0, 212, 255, 0.8),
-                                    0 0 8px rgba(0, 212, 255, 1),
-                                    0 0 15px rgba(0, 136, 255, 0.9),
-                                    0 0 25px rgba(0, 136, 255, 0.7),
-                                    0 0 40px rgba(157, 0, 255, 0.5),
-                                    0 0 60px rgba(157, 0, 255, 0.3),
-                                    0 0 90px rgba(102, 0, 204, 0.2)
+                                    0 0 10px 2px rgba(0, 212, 255, 0.8),
+                                    0 0 20px 10px rgba(0, 136, 255, 0.5),
+                                    0 0 60px 20px rgba(157, 0, 255, 0.3)
                                 `;
                                 visualDot.style.zIndex = '9999';
                             }
-                            // Añadir clase para que CSS oculte el anillo rojo
                             iconElement.classList.add('marker-highlight');
                             iconElement.style.zIndex = '10000';
+
+                            // Scroll suave al mapa en móvil si toca la lista
+                            if (window.innerWidth < 768) {
+                                document.getElementById('clean-map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
                         }
                         targetMarker.openTooltip();
                     }
-                });
+                };
 
-                // HOVER OUT
-                item.addEventListener('mouseleave', () => {
+                const deactivateMarker = () => {
                     const targetKey = item.getAttribute('data-target');
                     const targetMarker = markers[targetKey];
 
                     if (targetMarker) {
                         const iconElement = targetMarker.getElement();
                         if (iconElement) {
-                            // Encontrar el div visual interno
                             const visualDot = iconElement.querySelector('.marker-node, .marker-hub');
                             if (visualDot) {
-                                // RESETEAR ESTILOS INLINE
                                 visualDot.style.background = '';
                                 visualDot.style.transform = '';
                                 visualDot.style.boxShadow = '';
                                 visualDot.style.border = '';
                                 visualDot.style.zIndex = '';
                             }
-                            // Quitar clase para restaurar anillo rojo
                             iconElement.classList.remove('marker-highlight');
                             iconElement.style.zIndex = '';
                         }
                         targetMarker.closeTooltip();
                     }
+                };
+
+                // EVENTOS: Soportar Mouse (Hover) y Touch (Click)
+                item.addEventListener('mouseenter', activateMarker);
+                item.addEventListener('mouseleave', deactivateMarker);
+                // Touch Intuitivo: Al hacer click/tap también activa
+                item.addEventListener('click', (e) => {
+                    activateMarker();
                 });
             });
 
@@ -649,58 +643,28 @@
             }
         });
     </script>
+    <script>
+        // Parallax suave para los textos del Hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const titles = document.querySelectorAll('.hero-title');
+            titles.forEach((t, i) => {
+                const speed = (i + 1) * 0.1;
+                t.style.transform = `translateX(${scroll * (i % 2 === 0 ? speed : -speed)}px)`;
+            });
+        });
+    </script>
 
     <!-- CONTACT / FOOTER -->
     <footer id="contact" class="bg-white text-black py-24 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
             <div class="flex-1 max-w-xl">
-                <span class="text-[10px] font-black uppercase tracking-[0.5em] mb-8 block">Strategic Inquiry</span>
+                <span class="text-[10px] font-black uppercase tracking-[0.5em] mb-8 block">INQUIRIES</span>
 
-                <form id="inquiry-form" class="space-y-6">
-                    <!-- Honeypot Anti-Spam (invisible to users, bots fill it) -->
-                    <div style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1;">
-                        <label for="honeypot_field">Do not fill this field</label>
-                        <input type="text" name="honeypot_field" id="honeypot_field" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="group">
-                            <label
-                                class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Entity
-                                Identity</label>
-                            <input type="text" name="entity_name" required
-                                class="w-full bg-transparent border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none placeholder-zinc-400"
-                                placeholder="Nombre Completo / Productora">
-                        </div>
-                        <div class="group">
-                            <label
-                                class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Classification</label>
-                            <select name="classification" required
-                                class="w-full bg-white border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none appearance-none cursor-pointer">
-                                <option value="" disabled selected>SELECT ROLE</option>
-                                <option value="buyer">Buyer (Promoter)</option>
-                                <option value="stakeholder">Stakeholder (Brand)</option>
-                                <option value="partner">Partner (Agency)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="group">
-                        <label
-                            class="block text-[10px] mono uppercase text-zinc-500 mb-2 group-focus-within:text-black transition-colors">Data
-                            Packet</label>
-                        <textarea rows="2" name="data_packet" required
-                            class="w-full bg-transparent border-b border-zinc-300 py-2 text-black font-bold uppercase focus:outline-none focus:border-orange-500 transition-colors rounded-none placeholder-zinc-400 resize-none"
-                            placeholder="Fecha aprox, Venue, Presupuesto estimado..."></textarea>
-                    </div>
-
-                    <div class="pt-8">
-                        <button type="submit"
-                            class="border-2 border-black px-8 py-4 text-[10px] font-black tracking-[0.3em] uppercase hover:bg-black hover:text-white transition-all duration-300 w-full md:w-auto">
-                            Transmit Inquiry
-                        </button>
-                    </div>
-                </form>
+                <a href="mailto:info@deltaagency.com"
+                    class="text-6xl md:text-8xl font-black uppercase tracking-tighter hover:text-[#FF3E00] transition-colors leading-[0.8]">
+                    LET'S WORK
+                </a>
 
                 <div class="mt-16 flex gap-8">
                     <a href="#"
@@ -725,79 +689,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Parallax suave para los textos del Hero
-        window.addEventListener('scroll', () => {
-            const scroll = window.pageYOffset;
-            const titles = document.querySelectorAll('.hero-title');
-            titles.forEach((t, i) => {
-                const speed = (i + 1) * 0.1;
-                t.style.transform = `translateX(${scroll * (i % 2 === 0 ? speed : -speed)}px)`;
-            });
-        });
-    </script>
-    <script>
-        // Map Data Logic
-        const cityPoints = document.querySelectorAll('.city-point');
-        const nodeData = document.getElementById('node-data');
-        const nodeName = document.getElementById('node-name');
-        const nodeCoords = document.getElementById('node-coords');
-        const nodeStatus = document.getElementById('node-status');
-
-        // Data Store
-        const nodeInfo = {
-            'rosario': { name: 'ROSARIO [HUB]', coords: '32.94 S, 60.65 W', status: 'OPERATIONAL' },
-            'ba': { name: 'BUENOS AIRES', coords: '34.60 S, 58.38 W', status: 'ACTIVE' },
-            'sp': { name: 'SÃO PAULO', coords: '23.55 S, 46.63 W', status: 'ACTIVE' },
-            'santiago': { name: 'SANTIAGO', coords: '33.44 S, 70.66 W', status: 'ACTIVE' },
-            'lima': { name: 'LIMA', coords: '12.04 S, 77.04 W', status: 'ACTIVE' },
-            'bogota': { name: 'BOGOTÁ', coords: '04.71 N, 74.07 W', status: 'ACTIVE' }
-        };
-
-        cityPoints.forEach(point => {
-            point.addEventListener('mouseenter', (e) => {
-                const id = e.target.getAttribute('data-id');
-                if (nodeInfo[id]) {
-                    nodeName.innerText = nodeInfo[id].name;
-                    nodeCoords.innerText = nodeInfo[id].coords;
-                    nodeStatus.innerText = nodeInfo[id].status;
-                    nodeData.classList.remove('hidden');
-                }
-            });
-            point.addEventListener('mouseleave', () => {
-                // Keep showing last or hide? Let's hide for clean look
-                nodeData.classList.add('hidden');
-            });
-        });
-
-        // Form Logic
-        const form = document.getElementById('inquiry-form');
-        const submitBtn = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const originalText = submitBtn.innerText;
-
-            // Simulation State
-            submitBtn.innerText = "TRANSMITTING DATA...";
-            submitBtn.classList.add('bg-white', 'text-black');
-
-            setTimeout(() => {
-                submitBtn.innerText = "PACKET SENT [ACK]";
-                submitBtn.classList.add('bg-orange-500', 'border-orange-500');
-                submitBtn.classList.remove('bg-white', 'text-black', 'hover:bg-white');
-
-                // Reset after success
-                setTimeout(() => {
-                    form.reset();
-                    submitBtn.innerText = originalText;
-                    submitBtn.classList.remove('bg-orange-500', 'border-orange-500');
-                    submitBtn.classList.add('hover:bg-white');
-                }, 3000);
-            }, 1500);
-        });
-    </script>
 </body>
 
 </html>
