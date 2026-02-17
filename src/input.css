@@ -15,6 +15,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Spacing Fallbacks */
+.nav-links-gap>*+* {
+    margin-left: 48px !important;
+}
+
+.mobile-shortcuts-gap>*+* {
+    margin-left: 32px !important;
+}
+
+@media (min-width: 768px) {
+    .md\:hidden {
+        display: none !important;
+    }
+}
+
 /* =========================
    HERO SECTION
    ========================= */
